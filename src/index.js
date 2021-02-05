@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+//we can export all components here and refer this only once in app.js
+//export {default as SearchBar} from './SearchBar' .....
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />
@@ -9,6 +11,4 @@ import App from './App';
 //   document.getElementById('root')
 // );
 
-ReactDOM.render(
-  <App/>,document.querySelector('#root')
-);
+ReactDOM.render(<App/>,document.querySelector('#root'));

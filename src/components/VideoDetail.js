@@ -2,10 +2,14 @@ import React from 'react';
 import {Paper,Typography} from '@material-ui/core';
 
 const VideoDetail = ({video})=>{
-    if(!video) return <div>Loading Result.....</div>
+    if(!video) return <div>Loading Result.....</div>;
+    // else{
+    //     return <div>Welcome to uTube</div>
+    // }
 
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
     console.log(video)
+    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+
     return(
         <React.Fragment>
             <Paper elevation={5} style={{height:"80%"}}>
