@@ -1,9 +1,14 @@
 import React from 'react';
 import {Paper,Typography} from '@material-ui/core';
+import logo from '../assets/ATB3o1.gif';
 
 const VideoDetail = ({video})=>{
-    if(!video) return <div>Loading Result.....</div>;
-    // else{
+    
+    if(!video) return (
+    //<div>Loading Result.....</div>
+    <img src={logo} alt='Loading...'/>
+    );
+        // else{
     //     return <div>Welcome to uTube</div>
     // }
 
@@ -13,9 +18,9 @@ const VideoDetail = ({video})=>{
     return(
         <React.Fragment>
             <Paper elevation={5} style={{height:"80%"}}>
-                <iframe frameBorder="0" height="100%" width="100%" title="Video Player" src={videoSrc} />
+                <iframe frameBorder="5" height="100%" width="100%" title="Video Player" src={videoSrc} />
             </Paper>
-            <Paper elevation={5} style={{padding:'10px'}}>
+            <Paper elevation={5} style={{padding:'20px'}}>
                 <Typography variant="h4">
                     {video.snippet.title} : {video.snippet.channelTitle}
                 </Typography>

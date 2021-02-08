@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import { Paper, TextField } from '@material-ui/core';
+import { Button, Paper, TextField } from '@material-ui/core';
 
 // class SearchBar extends React.Component{
 //     handleChange=(event)=>{
@@ -24,10 +24,14 @@ const SearchBar = ({onSubmit}) => {
         }
     }
         return (
-            <Paper elevation={6} style={{ padding: '20px' }}>
-                    <TextField fullWidth label="Search Here ->" onChange={handleChange} onKeyPress={onKeyPress} value={searchTerm}></TextField>
+            <React.Fragment>
+                <Paper elevation={6} variant="outlined" style={{ padding: '20px' }}>
+                    <TextField fullWidth label="Search Here ->" onChange={handleChange} onKeyPress={onKeyPress} value={searchTerm}><Button/></TextField>
             </Paper>
-        )
+            <Button>(?-?)</Button>
+            </React.Fragment>
+            
+        );
     }
 
 

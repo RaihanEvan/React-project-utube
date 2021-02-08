@@ -4,7 +4,7 @@ import VideoItem from './VideoItem';
 
 const VideoList = ({videos,onVideoSelect})=>{
     const videoList = videos.map(video=>(
-    <VideoItem onVideoSelect={onVideoSelect} key={id} video={video}  />
+    <VideoItem onVideoSelect={onVideoSelect} key={video.id.videoId} video={video}  />
     ));
     return(
         <Grid container spacing={10}>
